@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>$(AssemblyName)</PackageId>
+    <Authors>Qanx</Authors>
+    <PackageIcon>default-package-icon-256x256.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/qiax/Qanx.Linq.Extensions</RepositoryUrl>
+    <Description>System.Linq Extension, You can use LINQ where in a fluent way, and we also provide an extension of paging query</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\Qanx\Pictures\default-package-icon-256x256.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

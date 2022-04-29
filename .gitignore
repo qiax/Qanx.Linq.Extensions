@@ -1,0 +1,8 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/.vs/Qanx.Linq.Extensions/v17
+/bin
+/obj
+/Qanx.Linq.Extensions/.vs/Qanx.Linq.Extensions/DesignTimeBuild/.dtbcache.v2
