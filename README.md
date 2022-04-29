@@ -1,2 +1,2 @@
-# Qanx.PagedList.Core
+# Qanx.Linq.Extensions
 Paging component
