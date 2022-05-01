@@ -12,6 +12,10 @@
 		<Description>System.Linq Extension, You can use LINQ where in a fluent way, and we also provide an extension of paging query</Description>
 		<PackageProjectUrl>https://github.com/qiax/Qanx.Linq.Extensions</PackageProjectUrl>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<FileVersion></FileVersion>
+		<Version>1.0.1</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
