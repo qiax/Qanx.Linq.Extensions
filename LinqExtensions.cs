@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace System.Linq
 {
+    /// <summary>
+    /// Linq Extension
+    /// </summary>
     public static class LinqExtensions
     {
         /// <summary>

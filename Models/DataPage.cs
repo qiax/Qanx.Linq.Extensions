@@ -2,6 +2,10 @@
 
 namespace Qanx.Linq.Extensions.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class DataPage<T>
     {
         /// <summary>

@@ -11,7 +11,8 @@ var query = _dbContext.Tradings.AsNoTracking()
     {
         Id = d.Id,
         Name = d.Name,
-        Code = d.Code
+        Code = d.Code,
+        HoldingDateTime = d.HoldingDateTime
     }).OrderByDescending(d => d.Id);
 ```
 基于LINQ的查询非常简单、优雅、流畅。您也可以使用我们的分页功能，它是基于IOrderedqueryable扩展的，您可以这样使用它：
@@ -24,3 +25,14 @@ We also provide a non asynchronous way:
 ```csharp
 var result = query.ToPagedList(pageIndex, pageSize);
 ```
+如果你需要对分页查询的结果进行特别的处理，你可以这样做（前提是你要先引入命名空间`Qanx.Linq.Extensions`）：
+```csharp
+var result = query.ToPagedList(pageIndex, pageSize)
+    .ForEach(item =>
+    {
+        item.Name = "prefix_" + item.Name;
+        item.Code = item.Code.ToString();
+        item.HoldingDateTimeStr = item.HoldingDateTime.ToString("yyyy-MM-dd HH:mm");
+    });
+```
+你也可是使用异步方法`ForEachAsync`。

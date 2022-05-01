@@ -13,7 +13,8 @@ var query = _dbContext.Tradings.AsNoTracking()
     {
         Id = d.Id,
         Name = d.Name,
-        Code = d.Code
+        Code = d.Code,
+        HoldingDateTime = d.HoldingDateTime
     }).OrderByDescending(d => d.Id);
 ```
 LINQ based query is so simple, elegant and fluent. You can also use our paging function, It is extended based on IOrderedqueryable, You can use it like this:
@@ -26,3 +27,14 @@ We also provide a non asynchronous way:
 ```csharp
 var result = query.ToPagedList(pageIndex, pageSize);
 ```
+If you need to deal with the results of paging queries in a special way, You can do this(The premise is that you must introduce namespaces`Qanx.Linq.Extensions`):
+```csharp
+var result = query.ToPagedList(pageIndex, pageSize)
+    .ForEach(item =>
+    {
+        item.Name = "prefix_" + item.Name;
+        item.Code = item.Code.ToString();
+        item.HoldingDateTimeStr = item.HoldingDateTime.ToString("yyyy-MM-dd HH:mm");
+    });
+```
+You can also use asynchronous methods`ForEachAsync`.
