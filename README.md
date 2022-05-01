@@ -1,4 +1,7 @@
+
 # Qanx.Linq.Extensions
+[中文文档 Chinese version](https://github.com/qiax/Qanx.Linq.Extensions/blob/main/README_CN.md)  
+
 System.Linq Extension, You can use LINQ where in a fluent way, and we also provide an extension of paging query.
 
 If you have a query condition and you are not sure it will have value, You can use `Whereif`, It will judge whether the value of the query condition is empty. If the value of the query condition is not empty or null, It will process your query according to the query criteria you refer to.
